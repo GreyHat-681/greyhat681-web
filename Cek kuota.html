@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAX STORE.ID | Cek Kuota XL & AXIS</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    :root {
+      --primary: #0091ff;
+      --secondary: #0200db;
+      --text-light: #ffffff;
+      --text-dim: #ffffff;
+      --bg-dark: #0b0e13;
+      --card-bg: #151a22;
+      --shadow: 0 0 20px rgba(0,0,0,0.6);
+      --radius: 14px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      padding: 18px 0;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: var(--shadow);
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 22px 16px 40px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 720px;
+      width: 100%;
+      padding: 26px 24px;
+      margin-bottom: 24px;
+      border-left: 3px solid var(--primary);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(0, 170, 255, 0.25);
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      text-shadow: 0 0 8px rgba(0,170,255,0.4);
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-dim);
+    }
+
+    .info-box {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      background: rgba(0,170,255,0.08);
+      border-left: 3px solid var(--primary);
+      border-radius: 10px;
+      padding: 12px 14px;
+      max-width: 720px;
+      width: 100%;
+      margin-bottom: 26px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .iframe-box {
+      position: relative;
+      width: 100%;
+      height: 85vh; /* Sedikit lebih tinggi agar nyaman */
+      max-width: 900px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      background: var(--card-bg);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Tutup bagian atas agar lebih rapi (Header Sidompul Asli) */
+    .iframe-top-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px; /* Disesuaikan untuk link kozow.com */
+      background: var(--card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      z-index: 10;
+      border-bottom: 1px solid #222;
+      text-shadow: 0 0 8px rgba(0,170,255,0.6);
+    }
+
+    /* Tutup bagian bawah agar lebih bersih */
+    .iframe-footer-cover {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 45px;
+      background: var(--bg-dark);
+      z-index: 9;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      padding: 14px 0;
+    }
+
+    @media (max-width: 600px) {
+      header { font-size: 1.4rem; }
+      .iframe-box { height: 80vh; }
+      .iframe-top-cover { font-size: 1.05rem; height: 55px; }
+      .card h2 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>MAX STORE.ID</header>
+
+  <main>
+    <section class="card">
+      <h2>Panduan Cek Kuota XL / AXIS</h2>
+      <p>
+        1. Masukkan nomor XL atau AXIS Anda pada kolom di bawah.<br>
+        2. Klik tombol <b>Cek</b> untuk melihat sisa kuota dan masa aktif.<br>
+        3. Tunggu beberapa detik hingga data muncul sepenuhnya.<br><br>
+        Pastikan koneksi internet Anda stabil agar hasil dapat ditampilkan dengan benar.
+      </p>
+    </section>
+
+    <div class="info-box">
+      <strong>Contoh Format Nomor:</strong><br>
+      • Internasional: <code>6287761082806</code><br>
+      • Lokal: <code>087761082806</code>
+    </div>
+
+    <div class="iframe-box">
+      <div class="iframe-top-cover">CEK KUOTA XL / AXIS</div>
+      <div class="iframe-footer-cover"></div>
+      <iframe src="https://xl.sidompul.kozow.com/" loading="lazy">
+        Browser Anda tidak mendukung iframe.
+      </iframe>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 MAX STORE.ID — Layanan Cek Kuota Publik
+  </footer>
+  
+</body>
+</html>
